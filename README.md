@@ -37,19 +37,6 @@ Nix-based [Home Manager](https://github.com/nix-community/home-manager) configur
     └── nvim/                  # (available but unused; nixvim handles it)
 ```
 
-## What's configured
-
-| Category | Tools |
-|----------|-------|
-| **Shell** | ZSH (completions, syntax highlighting, autosuggestions), Starship prompt |
-| **CLI** | eza, ripgrep, fd, fzf, bat, btop, yazi, glow, mise, chezmoi, fastfetch, curlie |
-| **Git** | delta (diff/pager), lazygit, gh, forgejo-cli |
-| **Tmux** | CPU status, resurrect, continuum (auto-save), vim-tmux-navigator |
-| **Editor** | Neovim via NixVim (full modular config) |
-| **Terminals** | Alacritty, Rio |
-| **AI** | opencode, codex |
-| **Services** | Ollama |
-
 ## Usage
 
 ```bash
@@ -58,9 +45,3 @@ home-manager switch --flake .#wonwow
 ```
 
 Designed for non-NixOS Linux via `targets.genericLinux.enable = true`.
-
-## Key bindings
-
-- `Ctrl-f` in ZSH → launch `tmux-sessionizer`
-- `Prefix + f` in tmux → launch `tmux-sessionizer`
-- `Ctrl-h/j/k/l` (or arrow keys) → vim-tmux-navigator pane navigation
