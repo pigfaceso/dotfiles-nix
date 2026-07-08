@@ -58,6 +58,7 @@
 
     # Editors
     ./modules/editors/neovim/init.nix
+    ./modules/editors/zed.nix
 
     # Desktop
     # ./modules/desktop/alacritty.nix
@@ -66,7 +67,6 @@
     ./modules/desktop/vlc.nix
     ./modules/desktop/obs-studio.nix
     ./modules/desktop/onlyoffice.nix
-    ./modules/desktop/zed.nix
 
     # Services
     ./modules/services/blanket.nix

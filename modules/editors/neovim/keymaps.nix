@@ -255,7 +255,7 @@
 
     # Opencode
     {
-      mode = ["x" "o"];
+      mode = ["n" "x"];
       key = "<leader>oa";
       action.__raw = "function() require('opencode').ask('@this: ') end";
       options = {
@@ -263,7 +263,7 @@
       };
     }
     {
-      mode = ["x" "o"];
+      mode = ["n" "x"];
       key = "<leader>os";
       action.__raw = "function() require('opencode').select() end";
       options = {
