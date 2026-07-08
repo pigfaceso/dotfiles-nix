@@ -67,7 +67,7 @@
     undofile = true;
 
     # Clipboard
-    clipboard = "unnamedplus";
+    # clipboard = "unnamedplus";
 
     # Confirm
     confirm = true;

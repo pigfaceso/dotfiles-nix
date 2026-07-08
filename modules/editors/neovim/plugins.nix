@@ -29,7 +29,8 @@
     };
 
     # AI code
-    codecompanion.enable = true;
+    # codecompanion.enable = true;
+    opencode.enable = true;
 
     # Autopairs
     nvim-autopairs.enable = true;

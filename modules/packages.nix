@@ -20,6 +20,7 @@
     btop
     yazi
     tree-sitter
+    bootdev-cli
 
     # Git
     github-cli

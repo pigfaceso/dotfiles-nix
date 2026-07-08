@@ -17,6 +17,10 @@
       source = ./files/scripts/tmux-sessionizer;
       executable = true;
     };
+    ".local/bin/gnome-personal-setup.sh" = {
+      source = ./files/scripts/gnome-personal-setup.sh;
+      executable = true;
+    };
   };
 
   # xdg.configFile = {
@@ -44,16 +48,35 @@
   imports = [
     ./modules/packages.nix
 
+    # CLI
     ./modules/cli/zsh.nix
     ./modules/cli/starship.nix
     ./modules/cli/zoxide.nix
     ./modules/cli/git.nix
     ./modules/cli/tmux.nix
-    ./modules/cli/ollama.nix
+    ./modules/cli/direnv.nix
 
+    # Editors
     ./modules/editors/neovim/init.nix
 
-    ./modules/desktop/alacritty.nix
-    ./modules/desktop/rio.nix
+    # Desktop
+    # ./modules/desktop/alacritty.nix
+    # ./modules/desktop/rio.nix
+    ./modules/desktop/ghostty.nix
+    ./modules/desktop/vlc.nix
+    ./modules/desktop/obs-studio.nix
+    ./modules/desktop/onlyoffice.nix
+    ./modules/desktop/zed.nix
+
+    # Services
+    ./modules/services/blanket.nix
+    ./modules/services/ollama.nix
+
+    # Development
+    ./modules/development/node.nix
+    ./modules/development/python.nix
+    ./modules/development/go.nix
+    ./modules/development/rust.nix
+    ./modules/development/ruby.nix
   ];
 }

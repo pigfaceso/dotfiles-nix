@@ -49,6 +49,24 @@
       };
     }
     {
+      mode = ["n" "v"];
+      key = "<leader>y";
+      action = "\"+y";
+      options.desc = "Yank to clipboard";
+    }
+    {
+      mode = ["n" "v"];
+      key = "<leader>p";
+      action = "\"+p";
+      options.desc = "Paste after cursor";
+    }
+    {
+      mode = ["n" "v"];
+      key = "<leader>P";
+      action = "\"+P";
+      options.desc = "Paste before cursor";
+    }
+    {
       mode = "v";
       key = "J";
       action = ":m '>+1<cr>gv=gv";
@@ -233,6 +251,40 @@
       mode = ["x" "o"];
       key = "ia";
       action.__raw = "function() require('nvim-treesitter-textobjects.select').select_textobject('@parameter.inner', 'textobject') end";
+    }
+
+    # Opencode
+    {
+      mode = ["x" "o"];
+      key = "<leader>oa";
+      action.__raw = "function() require('opencode').ask('@this: ') end";
+      options = {
+        desc = "Ask OpenCode...";
+      };
+    }
+    {
+      mode = ["x" "o"];
+      key = "<leader>os";
+      action.__raw = "function() require('opencode').select() end";
+      options = {
+        desc = "Select OpenCode...";
+      };
+    }
+    {
+      mode = ["n"];
+      key = "<S-C-u>";
+      action.__raw = "function() require('opencode').command('session.half.page.up') end";
+      options = {
+        desc = "Scroll OpenCode up";
+      };
+    }
+    {
+      mode = ["n"];
+      key = "<S-C-d>";
+      action.__raw = "function() require('opencode').command('session.half.page.down') end";
+      options = {
+        desc = "Scroll OpenCode down";
+      };
     }
   ];
 }

@@ -8,7 +8,7 @@
     vimAlias = true;
   };
 
-  programs.nixvim.imports = [ 
+  programs.nixvim.imports = [
     ./globals.nix
     ./options.nix
     ./keymaps.nix
