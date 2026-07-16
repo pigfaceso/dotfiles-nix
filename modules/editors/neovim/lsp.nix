@@ -13,5 +13,6 @@
     rust_analyzer.enable = true;
     tailwindcss.enable = true;
     ts_ls.enable = true;
+    texlab.enable = true;
   };
 }

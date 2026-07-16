@@ -1,32 +1,41 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     # Font
     nerd-fonts.hack
 
-    # General
-    mise
-    chezmoi
-    fastfetch
-    eza
-    ripgrep
-    curl
-    curlie
+    # Find tools
     fd
     fzf
-    bat
-    glow
-    btop
+    ripgrep
     yazi
-    tree-sitter
-    bootdev-cli
+
+    # General
+    chezmoi
+    bat
+    gnumake
+    go-task
+
+    # System/Disk
+    fastfetch
+    htop
+    btop
+    dua
+    lazydocker
+
+    # Network
+    curl
+    curlie
 
     # Git
     github-cli
     forgejo-cli
     lazygit
     delta
+
+    # Learn
+    bootdev-cli
 
     # AI
     opencode

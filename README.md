@@ -63,6 +63,6 @@ home-manager switch --flake .#wonwow
 
 The flake exposes a single `homeConfigurations."wonwow"` output. Non-NixOS support is handled via `targets.genericLinux.enable = true` and `targets.genericLinux.gpu.enable = true`.
 
-## Credits
+## Thanks to
 
 - [ThePrimeagen/tmux-sessionizer](https://github.com/theprimeagen/tmux-sessionizer) — [`tmux-sessionizer`](files/scripts/tmux-sessionizer), the fzf-based tmux session switcher.

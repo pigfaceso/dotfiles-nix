@@ -1,6 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+
   plugins = {
     # Utils
     web-devicons.enable = true;
@@ -25,11 +26,20 @@
       settings = {
         cmdline.enabled = false;
         signature.enabled = true;
+        sources.providers = {
+          latex-symbols = {
+            module = "blink-cmp-latex";
+            name = "Latex";
+            opts = {
+              # set to true to insert the latex command instead of the symbol
+              insert_command = false;
+            };
+          };
+        };
       };
     };
 
     # AI code
-    # codecompanion.enable = true;
     opencode.enable = true;
 
     # Autopairs
@@ -40,13 +50,9 @@
 
     # Git
     fugitive.enable = true;
-    lazygit.enable = true;
 
     # Highlight
     colorizer.enable = true;
-
-    # Tmux
-    tmux-navigator.enable = true;
 
     # Lsp diagnostic
     trouble.enable = true;
@@ -68,22 +74,12 @@
     # Picker
     mini-pick.enable = true;
 
-    # Surround (),{},[]
-    mini-surround.enable = true;
-
-    # Diffile (GitSign)
-    mini-diff = {
-      enable = true;
-      settings = {
-        view = {
-          style = "sign";
-          signs = {
-            add = "+";
-            change = "~";
-            delete = "-";
-          };
-        };
-      };
-    };
+    # Harpoon
+    harpoon.enable = true;
   };
+
+  # Plugins not in NixVim
+  extraPlugins = with pkgs.vimPlugins; [
+    vim-oscyank
+  ];
 }

@@ -69,6 +69,8 @@
     # Clipboard
     # clipboard = "unnamedplus";
 
+    # Path
+    path = ".,*";
     # Confirm
     confirm = true;
 

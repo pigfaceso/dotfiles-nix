@@ -18,6 +18,7 @@
       mouse-hide-while-typing = true;
       quit-after-last-window-closed = false;
       scrollback-limit = 1000000;
+      confirm-close-surface = false;
 
       # keybind = [
       #   "ctrl+n=new_tab"

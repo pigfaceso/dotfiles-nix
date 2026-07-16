@@ -3,6 +3,7 @@
 {
   programs.starship = {
     enable = true;
+    enableBashIntegration = false;
     settings = {
       add_newline = false;
       scan_timeout = 10;

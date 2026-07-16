@@ -9,10 +9,14 @@
   home.shell.enableShellIntegration = true;
 
   home.shellAliases = {
-    ls = "eza";
+    ls = "ls --color=auto";
   };
 
   home.file = { 
+    ".git-prompt.sh" = {
+      source = ./files/scripts/git-prompt.sh;
+      executable = true;
+    };
     ".local/bin/tmux-sessionizer" = {
       source = ./files/scripts/tmux-sessionizer;
       executable = true;
@@ -49,6 +53,7 @@
     ./modules/packages.nix
 
     # CLI
+    ./modules/cli/bash.nix
     ./modules/cli/zsh.nix
     ./modules/cli/starship.nix
     ./modules/cli/zoxide.nix
@@ -67,6 +72,8 @@
     ./modules/desktop/vlc.nix
     ./modules/desktop/obs-studio.nix
     ./modules/desktop/onlyoffice.nix
+    ./modules/desktop/vesktop.nix
+    ./modules/desktop/vicinae.nix
 
     # Services
     ./modules/services/blanket.nix

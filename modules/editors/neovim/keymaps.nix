@@ -5,24 +5,6 @@
     # General
     {
       mode = "n";
-      key = "L";
-      action = "<cmd>bNext<cr>";
-      options = {
-        silent = true;
-        desc = "Next Buffer";
-      };
-    }
-    {
-      mode = "n";
-      key = "H";
-      action = "<cmd>bprevious<cr>";
-      options = {
-        silent = true;
-        desc = "Previous Buffer";
-      };
-    }
-    {
-      mode = "n";
       key = "<C-d>";
       action = "<C-d>zz";
       options = {
@@ -37,15 +19,6 @@
       options = {
         silent = true;
         desc = "Page Up";
-      };
-    }
-    {
-      mode = "n";
-      key = "J";
-      action = "maJ`a<cmd>delmarks a<cr>";
-      options = {
-        silent = true;
-        desc = "Join";
       };
     }
     {
@@ -74,7 +47,7 @@
     }
     {
       mode = "v";
-      key = "J";
+      key = "K";
       action = ":m '<-2<cr>gv=gv";
       options.desc = "Move text down";
     }
@@ -128,7 +101,7 @@
     {
       mode = "n";
       key = "<leader>gg";
-      action = "<cmd>Pick files tool='git'<cr>";
+      action = "<cmd>Pick files tool=git<cr>";
       options = {
         silent = true;
         desc = "Git Files (Pick)";
@@ -191,24 +164,66 @@
       };
     }
 
-    # LazyGit
+    # Fugitive
     {
       mode = "n";
       key = "<leader>go";
-      action = "<cmd>LazyGit<cr>";
+      action = "<cmd>Git<cr>";
       options = {
         silent = true;
-        desc = "LazyGit";
+        desc = "Git (fugitive)";
       };
     }
     {
       mode = "n";
       key = "<leader>gl";
-      action = "<cmd>LazyGitLog<cr>";
+      action = "<cmd>vertical Git log --oneline --graph --parent --decorate<cr>";
       options = {
         silent = true;
-        desc = "LazyGit log";
+        desc = "Git log (fugitive)";
       };
+    }
+
+    # Harpoon
+    {
+      mode = "n";
+      key = "<leader>a";
+      action.__raw = "function() require('harpoon'):list():add() end";
+    }
+    {
+      mode = "n";
+      key = "<C-e>";
+      action.__raw = "function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end";
+    }
+    {
+      mode = "n";
+      key = "<C-h>";
+      action.__raw = "function() require('harpoon'):list():select(1) end";
+    }
+    {
+      mode = "n";
+      key = "<C-j>";
+      action.__raw = "function() require('harpoon'):list():select(2) end";
+    }
+    {
+      mode = "n";
+      key = "<C-k>";
+      action.__raw = "function() require('harpoon'):list():select(3) end";
+    }
+    {
+      mode = "n";
+      key = "<C-l>";
+      action.__raw = "function() require('harpoon'):list():select(4) end";
+    }
+    {
+      mode = "n";
+      key = "<C-p>";
+      action.__raw = "function() require('harpoon'):list():prev() end";
+    }
+    {
+      mode = "n";
+      key = "<C-n>";
+      action.__raw = "function() require('harpoon'):list():next() end";
     }
 
     # Treesitter Text Objects
