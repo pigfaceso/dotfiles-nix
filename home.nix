@@ -68,11 +68,11 @@
     # Desktop
     # ./modules/desktop/alacritty.nix
     # ./modules/desktop/rio.nix
+    # ./modules/desktop/vesktop.nix
     ./modules/desktop/ghostty.nix
     ./modules/desktop/vlc.nix
     ./modules/desktop/obs-studio.nix
     ./modules/desktop/onlyoffice.nix
-    ./modules/desktop/vesktop.nix
     ./modules/desktop/vicinae.nix
 
     # Services

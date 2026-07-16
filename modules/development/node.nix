@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     yarn
-    pnpm
+    # pnpm
     bun
   ];
 
