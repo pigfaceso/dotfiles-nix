@@ -3,6 +3,6 @@ vim.pack.add({
 })
 
 require('trouble').setup()
-vim.keymap.set('n', '<leader>td', '<cmd>Trouble diagnostics toggle<cr>', { desc = "Diagnostics (Toggle)"})
-vim.keymap.set('n', '<leader>ts', '<cmd>Trouble symbols toggle focus=false<cr>', { desc = "Symbols (Toggle)"})
-vim.keymap.set('n', '<leader>tl', '<cmd>Trouble lsp toggle focus=false win.position=right<cr>', { desc = "LSP Definitions (Toggle)"})
+
+vim.keymap.set('n', '<leader>ld', '<cmd>Trouble diagnostics toggle<cr>', { desc = "Diagnostics Toggle (Trouble)"})
+vim.keymap.set('n', 'gd', '<cmd>Trouble lsp_definitions<cr>', { desc = "LSP Definitions (Toggle)"})

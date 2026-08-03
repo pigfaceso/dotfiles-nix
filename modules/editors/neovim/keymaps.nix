@@ -7,19 +7,13 @@
       mode = "n";
       key = "<C-d>";
       action = "<C-d>zz";
-      options = {
-        silent = true;
-        desc = "Page Down";
-      };
+      options.desc = "Page Down";
     }
     {
       mode = "n";
       key = "<C-u>";
       action = "<C-u>zz";
-      options = {
-        silent = true;
-        desc = "Page Up";
-      };
+      options.desc = "Page Up";
     }
     {
       mode = ["n" "v"];
@@ -84,7 +78,7 @@
       action = "<cmd>Yazi cwd<cr>";
       options = {
         silent = true;
-        desc = "Work Directory (Yazi)";
+        desc = "Project Directory (Yazi)";
       };
     }
 

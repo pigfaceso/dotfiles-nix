@@ -1,12 +1,25 @@
 vim.pack.add({
-  { src = 'https://github.com/nvim-mini/mini.pick', name = 'mini.pick' },
   -- { src = 'https://github.com/ibhagwan/fzf-lua', name = 'fzf-lua' },
+  { src = 'https://github.com/nvim-mini/mini.pick' },
+})
+
+require('mini.pick').setup({
+  window = {
+    config = function()
+    local height = math.floor(0.618 * vim.o.lines)
+    local width = math.floor(0.618 * vim.o.columns)
+    return {
+      anchor = 'NW', height = height, width = width,
+      row = math.floor(0.5 * (vim.o.lines - height)),
+      col = math.floor(0.5 * (vim.o.columns - width)),
+    }
+  end
+  }
 })
 
 vim.keymap.set('n', '<leader>ff', function() require('mini.pick').builtin.files() end, { desc = 'Find File (mini.pick)' })
-vim.keymap.set('n', '<leader>gg', function() require('mini.pick').builtin.files({ tool = "git" }) end, { desc = 'Git File (mini.pick)' })
 vim.keymap.set('n', '<leader>fb', function() require('mini.pick').builtin.buffers() end, { desc = 'Buffers (mini.pick)' })
-vim.keymap.set('n', '<leader>fg', function() require('mini.pick').builtin.grep_live() end, { desc = 'Grep Live (mini.pick)' })
+vim.keymap.set('n', '<leader>fg', function() require('mini.pick').builtin.grep_live() end, { desc = 'Live Grep (mini.pick)' })
 
 -- vim.keymap.set('n', '<leader>ff', function() require('fzf-lua').files() end, { desc = 'Find File (FzF)' })
 -- vim.keymap.set('n', '<leader>fb', function() require('fzf-lua').buffers() end, { desc = 'Buffers (FzF)' })
@@ -14,7 +27,6 @@ vim.keymap.set('n', '<leader>fg', function() require('mini.pick').builtin.grep_l
 -- vim.keymap.set('n', '<leader>fh', function() require('fzf-lua').helptags() end, { desc = 'Help (FzF)' })
 -- vim.keymap.set('n', '<leader>fm', function() require('fzf-lua').marks() end, { desc = 'Marks (FzF)' })
 -- vim.keymap.set('n', '<leader>fj', function() require('fzf-lua').jumps() end, { desc = 'Jumplist (FzF)' })
--- vim.keymap.set('n', '<leader>gg', function() require('fzf-lua').git_files() end, { desc = 'Git Files (FzF)' })
 -- vim.keymap.set('n', '<leader>ls', function() require('fzf-lua').lsp_workspace_symbols() end, { desc = 'Lsp Workspace Symbols (FzF)' })
 -- vim.keymap.set('n', '<leader>lr', function() require('fzf-lua').lsp_references() end, { desc = 'Lsp References (FzF)' })
 -- vim.keymap.set('n', '<leader>ld', function() require('fzf-lua').lsp_workspace_diagnostics() end, { desc = 'Lsp Diagnostics (FzF)' })

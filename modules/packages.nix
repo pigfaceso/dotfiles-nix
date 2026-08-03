@@ -2,27 +2,28 @@
 
 {
   home.packages = with pkgs; [
-    # Font
-    nerd-fonts.hack
+    # Shell Scripts
+    gum
 
     # Find tools
     fd
-    fzf
     ripgrep
     yazi
+    ulauncher
 
     # General
     chezmoi
     bat
     gnumake
     go-task
+    tree-sitter
+    neovim
 
     # System/Disk
     fastfetch
     htop
     btop
     dua
-    lazydocker
 
     # Network
     curl
@@ -40,5 +41,6 @@
     # AI
     opencode
     codex
+    pi-coding-agent
   ];
 }

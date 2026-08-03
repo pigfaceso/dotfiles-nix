@@ -25,7 +25,8 @@
       shopt -s histappend
 
       # Prompt (PS1 by ~/.git-prompt.sh)
-      PROMPT_COMMAND='__git_ps1 "\[\e[1;32m\]\W\[\e[0m\]" " $?] " " \[\e[1;96m\]git:(\[\e[1;35m\]%s\[\e[1;96m\])\[\e[0m\]"'
+      # PS1='\[\e[1;32m\]\W\[\e[1;93m\]$(__git_ps1 " git:(%s)")\[\e[0m\] $?] '
+      PS1='[\W]\[\e[2m\]$(__git_ps1 " git:(%s)")\[\e[0m\] [$?]\$ '
 
       # Keybind
       bind '"\C-f":"tmux-sessionizer\n"'
@@ -35,6 +36,7 @@
       "ignoreboth"
     ];
     historyIgnore = [
+      ".."
       "pwd"
       "ls"
       "cd"
@@ -46,6 +48,7 @@
       "vi"
       "vim"
       "nvim"
+      "make"
       "tmux-sessionizer"
     ];
   };

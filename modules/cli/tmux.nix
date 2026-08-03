@@ -12,12 +12,31 @@
       # Shift+Enter on AI TUI
       set -g extended-keys on
       set -g extended-keys-format csi-u
+      set -g focus-events on
 
       # Vim copying
       bind-key -T copy-mode-vi v send-keys -X begin-selection
       bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
       bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
       unbind -T copy-mode-vi MouseDragEnd1Pane
+
+      # Status line format
+      set -g status-position bottom
+      set -g status-justify left
+      set -g status-style "fg=white"
+
+      set -g status-left " [#S]> "
+      set -g status-left-length 50
+
+      # set -g status-right-style "fg=white"
+      set -g status-right "[#H] %Y-%m-%d %H:%M "
+      set -g status-right-length 50
+
+      # setw -g window-status-current-style "fg=black bg=yellow"
+      setw -g window-status-current-format " [#I:#W #F] "
+
+      # setw -g window-status-style "fg=black"
+      setw -g window-status-format " #I:#W #F "
 
       # Alt+number to select window
       bind -n M-1 select-window -t 1
@@ -31,17 +50,13 @@
       bind -n M-9 select-window -t 9
 
       # tmux-sessionizer
-      bind-key -r f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
-      bind-key -n M-h run-shell "tmux neww tmux-sessionizer -s 0"
-      bind-key -n M-j run-shell "tmux neww tmux-sessionizer -s 1"
-      bind-key -n M-k run-shell "tmux neww tmux-sessionizer -s 2"
-      bind-key -n M-l run-shell "tmux neww tmux-sessionizer -s 3"
-    '';
+      bind-key -n C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
+      '';
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = resurrect;
         extraConfig = ''
-        set -g @resurrect-processes '"~npm run dev" "~bun run dev" ssh telnet'
+        set -g @resurrect-processes '"~npm run dev" "~bun run dev" ssh telnet pi'
         '';
       }
       # {

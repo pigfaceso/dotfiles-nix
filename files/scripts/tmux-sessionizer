@@ -9,7 +9,7 @@ PANE_CACHE_FILE="$PANE_CACHE_DIR/panes.cache"
 # ------------------------
 # # file: ~/.config/tmux-sessionizer/tmux-sessionizer.conf
 # # If set this override the default TS_SEARCH_PATHS (~/ ~/personal ~/personal/dev/env/.config)
-TS_SEARCH_PATHS=(~/workspace)
+TS_SEARCH_PATHS=(~/workspace ~/workspace/university/projects)
 # # If set this add additional search paths to the default TS_SEARCH_PATHS
 # # The number prefix is the depth for the Path [OPTIONAL]
 TS_EXTRA_SEARCH_PATHS=(~/.config:1)
@@ -25,7 +25,7 @@ TS_MAX_DEPTH=2
 #
 # how to use:
 # tmux-sessionizer -w 0 will execute the first command in window -t 69.
-TS_SESSION_COMMANDS=('opencode .' 'lazygit')
+TS_SESSION_COMMANDS=('codex')
 #
 # TS_LOG=true # will write logs to ~/.local/share/tmux-sessionizer/tmux-sessionizer.logs
 # TS_LOG_FILE=<file> # will write logs to <file> Defaults to ~/.local/share/tmux-sessionizer/tmux-sessionizer.logs

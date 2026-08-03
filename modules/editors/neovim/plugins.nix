@@ -48,6 +48,9 @@
     # Comment
     ts-comments.enable = true;
 
+    # Surround
+    mini-surround.enable = true;
+
     # Git
     fugitive.enable = true;
 

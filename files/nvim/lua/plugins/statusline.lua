@@ -1,0 +1,18 @@
+vim.opt.statusline = table.concat({
+  " ",
+  "%<",
+  -- "[%{mode()}]",
+  -- " | ",
+  "%{FugitiveStatusline()}",
+  " ",
+  "[%t] %h%w%m%r",
+  "%=",
+  "%{% luaeval('(package.loaded[''vim.diagnostic''] and next(vim.diagnostic.count()) and vim.diagnostic.status () .. '' '') or '''' ') %}",
+  "%{% luaeval('(package.loaded[''vim.lsp''] and ''[LSP('' .. table.concat(vim.tbl_map(function(client) return client.name end, vim.lsp.get_clients()), '','') .. '')]'') or ''[LSP()]'' ') %}",
+  " | ",
+  "%y %{&fileencoding} %{&fileformat}",
+  " | ",
+  "[%l,%c %P]",
+  -- "%{% &ruler ? ( &rulerformat == '' ? '%-8.(%l,%c%V%) %P' : &rulerformat ) : '' %}",
+  " ",
+})

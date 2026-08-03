@@ -1,15 +1,16 @@
 { config, pkgs, ... }:
-
-{
-  home.username = "wonwow";
+{ 
+  home.username = "wonwow"; 
   home.homeDirectory = "/home/wonwow";
-
   home.stateVersion = "26.05";
 
   home.shell.enableShellIntegration = true;
 
   home.shellAliases = {
+    ".." = "cd ..";
     ls = "ls --color=auto";
+    vi = "nvim";
+    vim = "nvim";
   };
 
   home.file = { 
@@ -26,10 +27,6 @@
       executable = true;
     };
   };
-
-  # xdg.configFile = {
-  # 	"nvim".source = ./files/nvim;
-  # };
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -52,32 +49,38 @@
   imports = [
     ./modules/packages.nix
 
+    # Fonts
+    ./modules/fonts.nix
+
     # CLI
     ./modules/cli/bash.nix
     ./modules/cli/zsh.nix
+    ./modules/cli/readline.nix
+    ./modules/cli/fzf.nix
     ./modules/cli/starship.nix
     ./modules/cli/zoxide.nix
     ./modules/cli/git.nix
     ./modules/cli/tmux.nix
     ./modules/cli/direnv.nix
+    ./modules/cli/newsboat.nix
 
     # Editors
-    ./modules/editors/neovim/init.nix
+    # ./modules/editors/neovim/init.nix
     ./modules/editors/zed.nix
 
     # Desktop
-    # ./modules/desktop/alacritty.nix
     # ./modules/desktop/rio.nix
+    # ./modules/desktop/ghostty.nix
     # ./modules/desktop/vesktop.nix
-    ./modules/desktop/ghostty.nix
+    # ./modules/desktop/vicinae.nix
+    ./modules/desktop/alacritty.nix
     ./modules/desktop/vlc.nix
     ./modules/desktop/obs-studio.nix
-    ./modules/desktop/onlyoffice.nix
-    ./modules/desktop/vicinae.nix
+    # ./modules/desktop/onlyoffice.nix
 
     # Services
     ./modules/services/blanket.nix
-    ./modules/services/ollama.nix
+    # ./modules/services/ollama.nix
 
     # Development
     ./modules/development/node.nix

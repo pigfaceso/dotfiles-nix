@@ -1,15 +1,8 @@
 vim.pack.add({
   { src = 'https://github.com/tpope/vim-fugitive', name = 'vim-fugitive' },
-  { src = 'https://github.com/nvim-mini/mini.diff', name = 'mini.diff' },
+  { src = 'https://github.com/lewis6991/gitsigns.nvim', name = 'gitsigns' },
 })
 
-require('mini.diff').setup({
-  view = {
-    style = 'sign',
-    signs = { add = '+', change = '~', delete = '-'},
-  },
-})
-
-vim.keymap.set('n', '<leader>go','<cmd>Git<cr>', { desc = 'Git (fugitive)' })
-vim.keymap.set('n', '<leader>gl','<cmd>Git log --oneline --graph --parent --decorate<cr>', { desc = 'Git log (fugitive)' })
+vim.keymap.set('n', '<leader>gg',function() vim.cmd.Git() end, { desc = 'Git (fugitive)' })
+vim.keymap.set('n', '<leader>gl','<cmd>Git log --oneline --graph --parents --decorate<cr>', { desc = 'Git log (fugitive)' })
 vim.keymap.set('n', '<leader>gdv','<cmd>Gvdiffsplit!<cr>', { desc = 'Gvdiffsplit! (fugitive)' })

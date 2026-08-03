@@ -1,6 +1,9 @@
 vim.opt.termguicolors = true
-vim.opt.cursorline = true
 vim.opt.winborder = 'rounded'
+
+-- Cursor
+vim.opt.cursorline = true
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 -- Autocomplete
 vim.opt.autocomplete = false
@@ -10,14 +13,18 @@ vim.opt.pumheight = 30
 vim.opt.pumborder = 'rounded'
 
 -- Line number
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.number = false
+vim.opt.relativenumber = false
 
 -- StatusLine
+vim.opt.laststatus = 3
+vim.opt.cmdheight = 1
+
+-- Show match brackets (), {}, []
 vim.opt.showmatch = true
 
 -- Statuscolumn
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'no'
 
 -- Split position
 vim.opt.splitbelow = true
@@ -31,19 +38,19 @@ vim.opt.scrolloff = 9
 vim.opt.sidescrolloff = 12
 
 -- Tab / Space
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.shiftround = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 
 -- Indent
 vim.opt.smartindent = false
 
 -- List
 vim.opt.listchars = {
-  tab = '  ',
+  tab = '> ',
   multispace = '·',
   trail = '·',
 }
@@ -62,8 +69,11 @@ vim.opt.backup = false
 vim.opt.swapfile = false
 vim.opt.undofile = true
 
+-- Path
+vim.opt.path = ".,**,"
+
 -- Other vim.options
-vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.clipboard = 'unnamedplus'
 vim.opt.timeout = true
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 10

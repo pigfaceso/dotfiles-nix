@@ -8,8 +8,8 @@ vim.api.nvim_create_autocmd('InsertEnter', { once = true, callback = function ()
     completion = {
       keyword = { range = 'full' },
       documentation = { auto_show = true, auto_show_delay_ms = 200 },
-      list = { selection = { preselect = false, auto_insert = true } },
-      ghost_text = { enabled = false },
+      list = { selection = { preselect = true, auto_insert = true } },
+      ghost_text = { enabled = true },
       menu = { },
     },
     cmdline = {
