@@ -16,6 +16,7 @@
     bat
     gnumake
     go-task
+    watchexec
     tree-sitter
     neovim
 
@@ -41,6 +42,5 @@
     # AI
     opencode
     codex
-    pi-coding-agent
   ];
 }

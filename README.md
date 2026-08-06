@@ -65,4 +65,4 @@ The flake exposes a single `homeConfigurations."wonwow"` output. Non-NixOS suppo
 
 ## Thanks to
 
-- [ThePrimeagen/tmux-sessionizer](https://github.com/theprimeagen/tmux-sessionizer) — [`tmux-sessionizer`](files/scripts/tmux-sessionizer), the fzf-based tmux session switcher.
+* [ThePrimeagen/tmux-sessionizer](https://github.com/theprimeagen/tmux-sessionizer) — [`tmux-sessionizer`](files/scripts/tmux-sessionizer), the fzf-based tmux session switcher.

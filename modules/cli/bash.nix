@@ -17,6 +17,9 @@
       # Source file
       [ -f ~/.git-prompt.sh ] && source ~/.git-prompt.sh
       
+      # Disable Ctrl-s, Crtl-q default keybind (stop,resume)
+      stty -ixon
+
       # Vi mode
       set -o vi
 

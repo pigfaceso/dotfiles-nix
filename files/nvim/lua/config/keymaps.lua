@@ -1,6 +1,4 @@
 -- Normal Mode
-vim.keymap.set('n', '<tab>', function() vim.cmd.tabNext() end, { desc = 'NextTab', silent = true })
-vim.keymap.set('n', '<S-tab>', function() vim.cmd.tabprevious() end, { desc = 'PreTab', silent = true })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Page Down' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page Up' })
 vim.keymap.set({'n', 'v'}, '<leader>y', '\"+y', { desc = 'Yank to clipboard' })
@@ -17,7 +15,7 @@ vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'Move text Down' })
 
 -- Terminal Mode
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
--- vim.keymap.set('t', '<C-w>h', '<C-\\><C-n><C-w>h')
--- vim.keymap.set('t', '<C-w>j', '<C-\\><C-n><C-w>j')
--- vim.keymap.set('t', '<C-w>k', '<C-\\><C-n><C-w>k')
--- vim.keymap.set('t', '<C-w>l', '<C-\\><C-n><C-w>l')
+vim.keymap.set('t', '<C-w>h', '<C-\\><C-n><C-w>h')
+vim.keymap.set('t', '<C-w>j', '<C-\\><C-n><C-w>j')
+vim.keymap.set('t', '<C-w>k', '<C-\\><C-n><C-w>k')
+vim.keymap.set('t', '<C-w>l', '<C-\\><C-n><C-w>l')

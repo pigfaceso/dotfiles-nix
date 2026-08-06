@@ -25,9 +25,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.notify('Inlay hint = false', vim.log.levels.INFO)
       end
     end, { desc = 'Toggle inline hint (vim.lsp)'})
-
-    -- Enable Inlay hint
-    vim.lsp.inlay_hint.enable()
   end
 })
 

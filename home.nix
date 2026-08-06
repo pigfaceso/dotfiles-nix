@@ -35,6 +35,7 @@
 
   home.sessionPath = [
     "$HOME/.local/bin"
+    "$HOME/.npm-global/bin"
   ];
 
   # Setting to work better wiht non-NixOS
@@ -66,7 +67,7 @@
 
     # Editors
     # ./modules/editors/neovim/init.nix
-    ./modules/editors/zed.nix
+    # ./modules/editors/zed.nix
 
     # Desktop
     # ./modules/desktop/rio.nix

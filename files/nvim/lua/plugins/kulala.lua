@@ -1,0 +1,8 @@
+vim.pack.add({
+  { src = 'https://github.com/mistweaverco/kulala.nvim', name = 'kulala' },
+})
+
+require('kulala').setup({
+  global_keymaps = true,
+  global_keymaps_prefix = '<leader>R',
+})
