@@ -77,11 +77,11 @@
     # ./modules/desktop/vicinae.nix
     # ./modules/desktop/alacritty.nix
     # ./modules/desktop/vlc.nix
-    # ./modules/desktop/obs-studio.nix
+    ./modules/desktop/obs-studio.nix
     # ./modules/desktop/onlyoffice.nix
 
     # Services
-    # ./modules/services/blanket.nix
+    ./modules/services/blanket.nix
     # ./modules/services/ollama.nix
 
     # Development
