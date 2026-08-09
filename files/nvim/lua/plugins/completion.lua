@@ -1,7 +1,6 @@
 vim.api.nvim_create_autocmd('InsertEnter', { once = true, callback = function ()
   vim.pack.add({
     { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range('^1'), name = 'blink.cmp' },
-    { src = 'https://github.com/rafamadriz/friendly-snippets', name = 'friendly-snippets' },
   })
 
   require('blink.cmp').setup({
@@ -10,11 +9,11 @@ vim.api.nvim_create_autocmd('InsertEnter', { once = true, callback = function ()
       keyword = { range = 'full' },
       documentation = { auto_show = true, auto_show_delay_ms = 200 },
       list = { selection = { preselect = true, auto_insert = true } },
-      ghost_text = { enabled = true },
+      ghost_text = { enabled = false },
       menu = { },
     },
     cmdline = {
-      enabled = false,
+      enabled = true,
     },
     sources = {
       default = { 'lsp', 'buffer', 'path', 'snippets' },

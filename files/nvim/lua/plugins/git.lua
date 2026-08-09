@@ -2,7 +2,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   once = true,
   callback = function()
     vim.pack.add({
-      { src = 'https://github.com/lewis6991/gitsigns.nvim', name = 'gitsigns' },
+      -- { src = 'https://github.com/lewis6991/gitsigns.nvim', name = 'gitsigns' },
     })
   end
 })

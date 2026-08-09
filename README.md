@@ -44,25 +44,6 @@ Nix-based [Home Manager](https://github.com/nix-community/home-manager) configur
     │   └── gnome-personal-setup.sh   # GNOME personalization script
     └── nvim/                          # (available but unused; nixvim handles it)
 ```
-
-## Usage
-
-### On NixOS
-
-```bash
-# Rebuild your NixOS system (home-manager is typically a NixOS module)
-sudo nixos-rebuild switch --flake /path/to/this/config
-```
-
-### On non-NixOS Linux
-
-```bash
-# Build and activate the standalone home-manager configuration
-home-manager switch --flake .#wonwow
-```
-
-The flake exposes a single `homeConfigurations."wonwow"` output. Non-NixOS support is handled via `targets.genericLinux.enable = true` and `targets.genericLinux.gpu.enable = true`.
-
 ## Thanks to
 
 * [ThePrimeagen/tmux-sessionizer](https://github.com/theprimeagen/tmux-sessionizer) — [`tmux-sessionizer`](files/scripts/tmux-sessionizer), the fzf-based tmux session switcher.

@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
     settings = {
-      user.email = "winpigface2537@gmail.com";
+      user.email = "pigfaceso.work@gmail.com";
       user.name = "pigfaceso";
       core.editor = "nvim";
       core.pager = "delta";

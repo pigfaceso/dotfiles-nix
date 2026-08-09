@@ -2,14 +2,14 @@ vim.opt.termguicolors = true
 vim.opt.winborder = 'rounded'
 
 -- Cursor
-vim.opt.cursorline = true
-vim.opt.guicursor = "n-v-i-c:block-Cursor"
+vim.opt.cursorline = false
+-- vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 -- Autocomplete
 vim.opt.autocomplete = false
-vim.opt.completeopt = 'menu,menuone,noselect'
-vim.opt.complete = '.,w,b,u,t'
-vim.opt.pumheight = 30
+vim.opt.completeopt = 'menu,menuone,noselect,popup'
+vim.opt.complete = '.,w,b,u,t,o'
+vim.opt.pumheight = 8
 vim.opt.pumborder = 'rounded'
 
 -- Line number

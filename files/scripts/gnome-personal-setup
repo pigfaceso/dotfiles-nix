@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+# Source linux distro info
+OS_RELEASE="/etc/os-release"
+if [[ -f ${OS_RELEASE} ]]; then
+  source ${OS_RELEASE}
+  echo "Distro: $NAME"
+else
+  echo "gnome-personal-setup: Can't find ${OS_RELEASE}"
+fi
+
+# General Config
+
+# XF86Keyboard => F11
+# Change language input keyboard by caplock
+gsettings set org.gnome.desktop.input-sources xkb-options "['grp:caps_toggle']"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['XF86Keyboard']"
+
+# Workspace
+gsettings set org.gnome.mutter dynamic-workspaces false
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
+
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Super>1']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Super>2']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Super>4']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Super>5']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6']"
+
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Shift><Super>1']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Shift><Super>2']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3 "['<Shift><Super>3']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Shift><Super>5']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4 "['<Shift><Super>4']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 "['<Shift><Super>6']"
+
+# Hold repeat key faster (Useful for vim)
+gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
+
+# Disable animation
+gsettings set org.gnome.desktop.interface enable-animations false
+
+# Extension
+if [[ $NAME == "Fedora Linux" ]]; then
+  GNOME_EXTENSION_PACKAGES=(
+    gnome-shell-extension-caffeine
+    gnome-shell-extension-appindicator
+    gnome-shell-extension-background-logo
+    gnome-shell-extension-drive-menu
+    gnome-shell-extension-auto-move-windows
+    gnome-shell-extension-windowsNavigator
+  )
+
+  sudo dnf install ${GNOME_EXTENSION_PACKAGES[@]}
+
+else
+  echo "gnome-personal-setup: Can't install GNOME Extension"
+  exit 1
+fi

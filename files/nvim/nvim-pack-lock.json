@@ -17,9 +17,9 @@
       "rev": "72a05f62c52241bc7441c820eb53946f92b2e6a4",
       "src": "https://github.com/catgoose/nvim-colorizer.lua"
     },
-    "conform": {
-      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
-      "src": "https://github.com/stevearc/conform.nvim"
+    "command-t": {
+      "rev": "40b7eafdf45475a012b970bf4e30b53926ed68c0",
+      "src": "https://github.com/wincent/command-t"
     },
     "darkvoid": {
       "rev": "45be993a5617e05811b6b293c05e6aded7003cc9",
@@ -29,16 +29,12 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
-    "gitsigns": {
-      "rev": "31d6fb2d618bca1482b9f274751ead5f03461408",
-      "src": "https://github.com/lewis6991/gitsigns.nvim"
-    },
-    "kulala": {
-      "rev": "d01d8fdba8be30b71ec47f9be22c6f0b954fcfa5",
-      "src": "https://github.com/mistweaverco/kulala.nvim"
+    "fzf-lua": {
+      "rev": "8671012a7b2a1648595952c655039d51fb301c14",
+      "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "leap": {
-      "rev": "b3f60bab38bdcbaa79a3ea0fd0f5be2a425572d6",
+      "rev": "0d0549b13428855c063468a6935c18e933599a18",
       "src": "https://codeberg.org/andyg/leap.nvim"
     },
     "mason": {
@@ -54,7 +50,7 @@
       "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-lspconfig": {
-      "rev": "1c0d8f70dbc8827263eedc3cf7021ceba0f68689",
+      "rev": "43ed3797b266e1ee8d222e491379ad471c9d3146",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-ts-autotag": {
@@ -64,10 +60,6 @@
     "nvim-ts-context-commentstring": {
       "rev": "6141a40173c6efa98242dc951ed4b6f892c97027",
       "src": "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
-    },
-    "nvim-web-devicons": {
-      "rev": "2ae6958df7ced50baac5035cec0c15799eedfbf7",
-      "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "oil": {
       "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
@@ -81,14 +73,6 @@
       "rev": "9dc4ffc4fb010e7abb976a92360c2c5a7d324c15",
       "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
-    "trouble": {
-      "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
-      "src": "https://github.com/folke/trouble.nvim"
-    },
-    "vim-dispatch": {
-      "rev": "a2ff28abdb2d89725192db5b8562977d392a4d3f",
-      "src": "https://github.com/tpope/vim-dispatch"
-    },
     "vim-fugitive": {
       "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
       "src": "https://github.com/tpope/vim-fugitive"
@@ -96,10 +80,6 @@
     "vimwiki": {
       "rev": "a54a3002e229c4b43d69ced170ff77663a5b2c40",
       "src": "https://github.com/vimwiki/vimwiki"
-    },
-    "which-key": {
-      "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
-      "src": "https://github.com/folke/which-key.nvim"
     }
   }
 }

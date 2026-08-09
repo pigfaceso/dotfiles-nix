@@ -8,7 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs =
@@ -25,7 +24,6 @@
         # the path to your home.nix.
         modules = [
           ./home.nix
-          nixvim.homeModules.nixvim
         ];
 
         # Optionally use extraSpecialArgs

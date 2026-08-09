@@ -49,8 +49,14 @@
       bind -n M-8 select-window -t 8
       bind -n M-9 select-window -t 9
 
+      # Alt+{h,j,k,l} to select pane
+      bind -n M-h select-pane -L
+      bind -n M-j select-pane -D
+      bind -n M-k select-pane -U
+      bind -n M-l select-pane -R
+
       # tmux-sessionizer
-      bind-key -n C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
+      bind -n C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
       '';
     plugins = with pkgs.tmuxPlugins; [
       {
