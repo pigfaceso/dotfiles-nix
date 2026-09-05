@@ -5,22 +5,26 @@
     enable = true;
     defaultKeymap = "viins";
     enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    autosuggestion.enable = true;
+    syntaxHighlighting.enable = false;
+    autosuggestion.enable = false;
     historySubstringSearch.enable = true;
     initContent = ''
-      export PNPM_HOME="$HOME/.local/share/pnpm"
-      export PATH="$PNPM_HOME/bin:$PATH"
-
       # Source files
       # source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+      [ -f ~/.git-prompt.sh ] && source ~/.git-prompt.sh
+
+      # Disable Ctrl-s, Crtl-q default keybind (stop,resume)
+      stty -ixon
 
       # Bindkey
       bindkey -s ^f "tmux-sessionizer\n"
-      bindkey -s '\eh' "tmux-sessionizer -s 0\n"
-      bindkey -s '\ej' "tmux-sessionizer -s 1\n"
-      bindkey -s '\ek' "tmux-sessionizer -s 2\n"
-      bindkey -s '\es' "tmux-sessionizer -s 3\n"
+
+      # Prompt
+      setopt PROMPT_SUBST
+      PS1='[%1~]%F{8}$(__git_ps1 " git:(%s)")%f [%?]%% '
+
+      # Start tmux
+      tmux-start
     '';
   };
 }

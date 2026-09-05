@@ -27,6 +27,8 @@
       { title = "It's FOSS"; url = "https://itsfoss.com/rss"; }
       { title = "Fedora Community Blog"; url = "https://communityblog.fedoraproject.org/feed"; }
       { title = "The Verge"; url = "https://www.theverge.com/rss/index.xml"; }
+      { title = "bleepingcomputer"; url = "https://www.bleepingcomputer.com/feed"; }
+      { title = "The Hacker News"; url = "https://feeds.feedburner.com/TheHackersNews"; }
     ];
   };
 }

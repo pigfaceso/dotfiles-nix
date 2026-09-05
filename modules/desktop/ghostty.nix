@@ -9,7 +9,7 @@
       theme = "Tomorrow Night";
       shell-integration = "none";
       bell-features = "no-system";
-      font-family = "Hack Nerd Font";
+      font-family = "AdwaitaMono Nerd Font";
       font-size = 12;
       cursor-style = "block";
       cursor-style-blink = false;

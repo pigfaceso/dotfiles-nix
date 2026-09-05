@@ -30,8 +30,8 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Super>6
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Shift><Super>1']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Shift><Super>2']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3 "['<Shift><Super>3']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Shift><Super>5']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4 "['<Shift><Super>4']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Shift><Super>5']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 "['<Shift><Super>6']"
 
 # Hold repeat key faster (Useful for vim)
@@ -42,6 +42,19 @@ gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 25
 gsettings set org.gnome.desktop.interface enable-animations false
 
 # Extension
+
+# Argos
+git clone https://github.com/p-e-w/argos /tmp/argos
+cp -r /tmp/argos/argos@pew.worldwidemann.com ~/.local/share/gnome-shell/extension
+
+# Paperwm
+git clone https://github.com/paperwm/paperwm /tmp/paperwm
+make -C !$ install
+
+# Caffeine
+git clone https://github.com/eonpatapon/gnome-shell-extension-caffeine /tmp/gnome-extesion-caffeine
+make -C !$ build && make -C !$ install
+
 if [[ $NAME == "Fedora Linux" ]]; then
   GNOME_EXTENSION_PACKAGES=(
     gnome-shell-extension-caffeine

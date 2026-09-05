@@ -4,6 +4,7 @@ VERSION=0.1.0
 WORK_DIR=(
   ~/workspace:2
   ~/workspace/university/projects:1
+  ~/qemu:1
   ~/.config:1
 )
 MAX_DEPTH=1

@@ -1,6 +1,7 @@
 vim.api.nvim_create_autocmd('InsertEnter', { once = true, callback = function ()
   vim.pack.add({
     { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range('^1'), name = 'blink.cmp' },
+    { src = 'https://github.com/mgalliou/blink-cmp-tmux' },
   })
 
   require('blink.cmp').setup({
@@ -15,11 +16,30 @@ vim.api.nvim_create_autocmd('InsertEnter', { once = true, callback = function ()
     cmdline = {
       enabled = true,
     },
-    sources = {
-      default = { 'lsp', 'buffer', 'path', 'snippets' },
-    },
     fuzzy = { implementation = 'prefer_rust' },
-    signature = { enabled = true }
+    signature = { enabled = true },
+    sources = {
+      default = { 'lsp', 'buffer', 'path', 'snippets', 'tmux' },
+      providers = {
+        tmux = {
+          module = "blink-cmp-tmux",
+          name = "tmux",
+          -- default options
+          opts = {
+            -- `panes` option supports these values:
+            -- * `window`  - completions from current tmux window panes only
+            -- * `session` - completions from current tmux session panes only
+            -- * `all`     - completions from all tmux panes
+            panes = "window",
+            capture_history = false,
+            -- only suggest completions from `tmux` if the `trigger_chars` are
+            -- used
+            triggered_only = false,
+            trigger_chars = { "." }
+          },
+        },
+      },
+    },
   })
 
   vim.lsp.config('*', {

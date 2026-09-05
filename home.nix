@@ -22,6 +22,14 @@
       source = ./files/scripts/tmux-sessionizer;
       executable = true;
     };
+    ".local/bin/tmux-toggle-term" = {
+      source = ./files/scripts/tmux-toggle-term;
+      executable = true;
+    };
+    ".local/bin/tmux-start" = {
+      source = ./files/scripts/tmux-start;
+      executable = true;
+    };
     ".local/bin/gnome-personal-setup" = {
       source = ./files/scripts/gnome-personal-setup;
       executable = true;
@@ -56,6 +64,7 @@
 
     # CLI
     ./modules/cli/bash.nix
+    ./modules/cli/zsh.nix
     ./modules/cli/readline.nix
     ./modules/cli/fzf.nix
     ./modules/cli/zoxide.nix
@@ -63,8 +72,8 @@
     ./modules/cli/tmux.nix
     ./modules/cli/direnv.nix
     # ./modules/cli/starship.nix
-    # ./modules/cli/zsh.nix
-    # ./modules/cli/newsboat.nix
+    ./modules/cli/newsboat.nix
+    ./modules/cli/atuin.nix
 
     # Editors
     # ./modules/editors/neovim/init.nix
@@ -72,23 +81,23 @@
 
     # Desktop
     # ./modules/desktop/rio.nix
-    # ./modules/desktop/ghostty.nix
+    ./modules/desktop/ghostty.nix
     # ./modules/desktop/vesktop.nix
     # ./modules/desktop/vicinae.nix
-    # ./modules/desktop/alacritty.nix
+    ./modules/desktop/alacritty.nix
     # ./modules/desktop/vlc.nix
     ./modules/desktop/obs-studio.nix
     # ./modules/desktop/onlyoffice.nix
 
     # Services
-    ./modules/services/blanket.nix
+    # ./modules/services/blanket.nix
     # ./modules/services/ollama.nix
 
     # Development
-    # ./modules/development/node.nix
-    # ./modules/development/python.nix
-    # ./modules/development/go.nix
-    # ./modules/development/rust.nix
+    ./modules/development/node.nix
+    ./modules/development/python.nix
+    ./modules/development/go.nix
+    ./modules/development/rust.nix
     # ./modules/development/ruby.nix
   ];
 }

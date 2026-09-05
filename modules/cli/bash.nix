@@ -14,8 +14,11 @@
       # AQUA_BOLD='\[\e[1;96m\]'
       # NOCOLOR='\[\e[0m\]'
 
+      # env
+      WWW_HOME="https://lite.duckduckgo.com/lite/"
+
       # Source file
-      [ -f ~/.git-prompt.sh ] && source ~/.git-prompt.sh
+      [[ -f ~/.git-prompt.sh ]] && source ~/.git-prompt.sh
       
       # Disable Ctrl-s, Crtl-q default keybind (stop,resume)
       stty -ixon
@@ -33,6 +36,9 @@
 
       # Keybind
       bind '"\C-f":"tmux-sessionizer\n"'
+      
+      # Start tmux
+      tmux-start
     '';
     historyControl = [
       "erasedups"

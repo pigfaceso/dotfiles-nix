@@ -55,23 +55,37 @@
       bind -n M-k select-pane -U
       bind -n M-l select-pane -R
 
+      bind-key -T copy-mode-vi 'C-h' select-pane -L
+      bind-key -T copy-mode-vi 'C-j' select-pane -D
+      bind-key -T copy-mode-vi 'C-k' select-pane -U
+      bind-key -T copy-mode-vi 'C-l' select-pane -R
+
       # tmux-sessionizer
       bind -n C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
+    
+      # toggle-term
+      bind -n 'C-\' run-shell -b "~/.local/bin/tmux-toggle-term float"
       '';
     plugins = with pkgs.tmuxPlugins; [
       {
-        plugin = resurrect;
+        plugin = vim-tmux-navigator;
         extraConfig = ''
-        set -g @resurrect-processes '"~npm run dev" "~bun run dev" ssh telnet pi'
+        set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
         '';
       }
-      # {
-      #   plugin = continuum;
-      #   extraConfig = ''
-      #   set -g @continuum-restore 'off'
-      #   set -g @continuum-save-interval '60' # minutes
-      #   '';
-      # }
+      {
+        plugin = resurrect;
+        extraConfig = ''
+        set -g @resurrect-processes '"~npm run dev" "~bun run dev" ssh telnet pi codex newsboat concord'
+        '';
+      }
+      {
+        plugin = continuum;
+        extraConfig = ''
+        set -g @continuum-restore 'on'
+        set -g @continuum-save-interval '60' # minutes
+        '';
+      }
     ];
   };
 }

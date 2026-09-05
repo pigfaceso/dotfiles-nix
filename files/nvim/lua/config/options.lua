@@ -2,7 +2,7 @@ vim.opt.termguicolors = true
 vim.opt.winborder = 'rounded'
 
 -- Cursor
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 -- vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 -- Autocomplete
@@ -13,8 +13,8 @@ vim.opt.pumheight = 8
 vim.opt.pumborder = 'rounded'
 
 -- Line number
-vim.opt.number = false
-vim.opt.relativenumber = false
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- StatusLine
 vim.opt.laststatus = 3
@@ -24,7 +24,7 @@ vim.opt.cmdheight = 1
 vim.opt.showmatch = true
 
 -- Statuscolumn
-vim.opt.signcolumn = 'no'
+vim.opt.signcolumn = 'yes'
 
 -- Split position
 vim.opt.splitbelow = true
