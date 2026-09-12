@@ -8,6 +8,8 @@
 
   home.shellAliases = {
     ".." = "cd ..";
+    "..." = "cd ../..";
+    "...." = "cd ../../..";
     ls = "ls --color=auto";
     vi = "nvim";
     vim = "nvim";
@@ -20,10 +22,6 @@
     };
     ".local/bin/tmux-sessionizer" = {
       source = ./files/scripts/tmux-sessionizer;
-      executable = true;
-    };
-    ".local/bin/tmux-toggle-term" = {
-      source = ./files/scripts/tmux-toggle-term;
       executable = true;
     };
     ".local/bin/tmux-start" = {
@@ -44,6 +42,7 @@
   home.sessionPath = [
     "$HOME/.local/bin"
     "$HOME/.npm-global/bin"
+    "$HOME/.bun/bin"
     "$HOME/.local/share/nvim/mason/bin"
   ];
 
@@ -95,6 +94,7 @@
 
     # Development
     ./modules/development/node.nix
+    ./modules/development/bun.nix
     ./modules/development/python.nix
     ./modules/development/go.nix
     ./modules/development/rust.nix

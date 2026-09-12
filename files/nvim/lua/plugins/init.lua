@@ -2,9 +2,7 @@
 vim.cmd.packadd('nvim.difftool')
 vim.cmd.packadd('nvim.tohtml')
 vim.cmd.packadd('nvim.undotree')
-vim.keymap.set('n', '<leader>u', function() vim.cmd.Undotree() end, { desc = 'Undotree', silent = true })
-
--- Custom plugins
+vim.keymap.set('n', '<leader>u', function() vim.cmd.Undotree() end, { desc = 'Undotree', silent = true }) -- Custom plugins
 require('plugins.icon')
 require('plugins.mason')
 require('plugins.treesitter')
@@ -28,6 +26,8 @@ require('plugins.csvview')
 require('plugins.which-key')
 require('plugins.statusline')
 require('plugins.tmux-navigator')
+require('plugins.tabout')
+require('plugins.treesj')
 -- require('plugins.trouble')
 -- require('plugins.kulala')
 -- require('plugins.vim-dispatch')

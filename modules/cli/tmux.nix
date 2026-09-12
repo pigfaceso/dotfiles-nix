@@ -55,10 +55,13 @@
       bind -n M-k select-pane -U
       bind -n M-l select-pane -R
 
-      bind-key -T copy-mode-vi 'C-h' select-pane -L
-      bind-key -T copy-mode-vi 'C-j' select-pane -D
-      bind-key -T copy-mode-vi 'C-k' select-pane -U
-      bind-key -T copy-mode-vi 'C-l' select-pane -R
+      bind -T copy-mode-vi 'C-h' select-pane -L
+      bind -T copy-mode-vi 'C-j' select-pane -D
+      bind -T copy-mode-vi 'C-k' select-pane -U
+      bind -T copy-mode-vi 'C-l' select-pane -R
+
+      # Clear scroll buffer
+      bind 'C-l' clear-history
 
       # tmux-sessionizer
       bind -n C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
@@ -76,7 +79,7 @@
       {
         plugin = resurrect;
         extraConfig = ''
-        set -g @resurrect-processes '"~npm run dev" "~bun run dev" ssh telnet pi codex newsboat concord'
+        set -g @resurrect-processes '"~npm run dev" "~bun run dev" ssh telnet kew newsboat'
         '';
       }
       {

@@ -1,11 +1,6 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    yarn
-    # pnpm
-    bun
-  ];
 
   programs.npm = {
     enable = true;

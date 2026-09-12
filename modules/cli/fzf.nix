@@ -3,7 +3,7 @@
 {
   programs.fzf = {
     enable = true;
-    enableBashIntegration = false;
+    enableBashIntegration = true;
     enableZshIntegration = false;
   };
 }
