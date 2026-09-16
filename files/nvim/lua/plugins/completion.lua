@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd('InsertEnter', { once = true, callback = function ()
     keymap = {
       preset = 'default',
       ['<Tab>'] = { 'accept', 'fallback' },
-      ['<CR>'] = { 'accept', 'fallback' },
+      -- ['<CR>'] = { 'accept', 'fallback' },
     },
     completion = {
       keyword = { range = 'full' },

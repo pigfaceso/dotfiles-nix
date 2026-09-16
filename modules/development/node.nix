@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-
   programs.npm = {
     enable = true;
     settings = {

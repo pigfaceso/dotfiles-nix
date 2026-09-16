@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     require('tree-sitter-manager').setup({
       ensure_installed = {
         'bash',
+        'blade',
         'c',
         'html',
         'htmldjango',

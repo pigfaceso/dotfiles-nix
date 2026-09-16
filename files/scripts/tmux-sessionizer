@@ -4,7 +4,6 @@ VERSION=0.1.0
 WORK_DIR=(
   ~/workspace:2
   ~/workspace/university/projects:1
-  ~/qemu:1
   ~/.config:1
 )
 MAX_DEPTH=1
@@ -51,7 +50,7 @@ function main() {
     echo "tmux-sesionizer: no arguments"
     exit 0
   else
-    selected=$(find_dir | sed "s|^$HOME/||" | fzf --prompt "(tmux-sesionizer) " --layout reverse)
+    selected=$(find_dir | sed "s|^$HOME/||" | fzf --prompt "(tmux-sesionizer) ")
   fi
 
   if [[ -z $selected ]]; then

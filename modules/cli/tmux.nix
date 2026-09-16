@@ -61,13 +61,10 @@
       bind -T copy-mode-vi 'C-l' select-pane -R
 
       # Clear scroll buffer
-      bind 'C-l' clear-history
+      bind C-l clear-history
 
       # tmux-sessionizer
       bind -n C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
-    
-      # toggle-term
-      bind -n 'C-\' run-shell -b "~/.local/bin/tmux-toggle-term float"
       '';
     plugins = with pkgs.tmuxPlugins; [
       {
