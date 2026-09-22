@@ -33,7 +33,8 @@ in
       shopt -s checkwinsize
       shopt -s histappend
 
-      # Prompt (PS1 by ~/.git-prompt.sh)
+      # Prompt
+      PROMPT_COMMAND='history -a; history -c; history -r'
       # PS1='\[\e[1;32m\]\W\[\e[1;93m\]$(__git_ps1 " git:(%s)")\[\e[0m\] $?] '
       PS1='[\W]\[\e[2m\]$(__git_ps1 " git:(%s)")\[\e[0m\] [$?]\$ '
 
