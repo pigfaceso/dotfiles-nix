@@ -63,6 +63,9 @@
       # Clear scroll buffer
       bind C-l clear-history
 
+      # Workmux dashboard
+      bind C-w display-popup -h 30 -w 100 -E "workmux dashboard"
+
       # tmux-sessionizer
       bind -n C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
       '';
