@@ -54,6 +54,7 @@ in
     historyIgnore = [
       ".."
       "..."
+      "...."
       "pwd"
       "ls"
       "cd"

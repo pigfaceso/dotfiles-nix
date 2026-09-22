@@ -13,6 +13,8 @@
     ls = "ls --color=auto";
     vi = "nvim";
     vim = "nvim";
+    wlc = "wl-copy";
+    wlp = "wl-paste";
   };
 
   home.file = { 
