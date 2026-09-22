@@ -1,7 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, flyline, ... }:
 
+let
+  flylinePkg = flyline.packages.${pkgs.system}.flyline;
+in
 {
   home.packages = with pkgs; [
+    flylinePkg
+
     # Find tools
     fd
     ripgrep
@@ -10,6 +15,7 @@
     # General
     watchexec
     bat
+    kew
     tree-sitter
     neovim
 

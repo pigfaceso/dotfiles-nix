@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, flyline, ... }:
 
+let
+  flylinePkg = flyline.packages.${pkgs.system}.flyline;
+in
 {
   programs.bash = {
     enable = true;
@@ -37,6 +40,9 @@
       # Keybind
       bind '"\C-f":"tmux-sessionizer\n"'
       
+      # flyline
+      # enable flyline 2>/dev/null || enable -f ${flylinePkg}/lib/libflyline.so flyline --show-animations false
+
       # Start tmux
       tmux-start
     '';
@@ -46,6 +52,7 @@
     ];
     historyIgnore = [
       ".."
+      "..."
       "pwd"
       "ls"
       "cd"

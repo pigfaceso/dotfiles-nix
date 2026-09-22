@@ -3,7 +3,7 @@
 {
   programs.tmux = {
     enable = true;
-    terminal = "tmux-256color";
+    # terminal = "tmux-256color";
     prefix = "C-a";
     mouse = true;
     baseIndex = 1;
@@ -82,7 +82,7 @@
       {
         plugin = continuum;
         extraConfig = ''
-        set -g @continuum-restore 'on'
+        set -g @continuum-restore 'off'
         set -g @continuum-save-interval '60' # minutes
         '';
       }
