@@ -23,7 +23,7 @@
       # Status line format
       set -g status-position bottom
       set -g status-justify left
-      set -g status-style "fg=white"
+      set -g status-style "#{?client_prefix,fg=black bg=white,fg=white}"
 
       set -g status-left " [#S]> "
       set -g status-left-length 50
