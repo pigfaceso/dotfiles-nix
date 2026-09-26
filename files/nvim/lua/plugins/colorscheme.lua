@@ -9,5 +9,8 @@ require('darkvoid').setup({
 })
 
 vim.cmd.colorscheme('darkvoid')
+vim.api.nvim_set_hl(0, 'Search', { bg = '#1bfd9c', fg = '#000000' })
+vim.api.nvim_set_hl(0, 'IncSearch', { bg = '#1bfd9c', fg = '#000000' })
+
 -- vim.cmd.colorscheme('tokyonight-night')
 -- vim.cmd.colorscheme('solarized-osaka')
