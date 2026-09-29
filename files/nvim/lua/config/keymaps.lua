@@ -18,7 +18,7 @@ vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv", { desc = 'Move text Up' })
 vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'Move text Down' })
 
 -- Terminal Mode
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+-- vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 vim.keymap.set('t', '<C-w>h', '<C-\\><C-n><C-w>h')
 vim.keymap.set('t', '<C-w>j', '<C-\\><C-n><C-w>j')
 vim.keymap.set('t', '<C-w>k', '<C-\\><C-n><C-w>k')
