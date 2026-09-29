@@ -15,6 +15,7 @@
     vim = "nvim";
     wlc = "wl-copy";
     wlp = "wl-paste";
+    n = "nnn";
   };
 
   home.file = { 
